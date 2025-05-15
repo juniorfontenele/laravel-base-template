@@ -1,0 +1,14 @@
+* text=auto eol=lf
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+/CHANGELOG.md export-ignore
+/composer.lock export-ignore
+/package-lock.json export-ignore
+/_ide_helper.php export-ignore
+/_ide_helper_models.php export-ignore
+/.phpstorm.meta.php export-ignore

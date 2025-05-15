@@ -1,0 +1,124 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "juniorfontenele/laravel-base-template",
+    "type": "project",
+    "description": "The skeleton application for the Laravel application.",
+    "keywords": [
+        "laravel",
+        "template"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Junior Fontenele",
+            "email": "github@juniorfontenele.com.br"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "inertiajs/inertia-laravel": "^2.0",
+        "laradumps/laradumps": "^4.0",
+        "laravel/framework": "^12.0",
+        "laravel/prompts": "^0.3.5",
+        "laravel/tinker": "^2.10.1",
+        "opcodesio/log-viewer": "^3.15",
+        "sentry/sentry-laravel": "^4.13",
+        "tightenco/ziggy": "^2.4"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.15",
+        "barryvdh/laravel-ide-helper": "^3.5",
+        "driftingly/rector-laravel": "^2.0",
+        "fakerphp/faker": "^1.23",
+        "larastan/larastan": "^3.0",
+        "laravel/pail": "^1.2.2",
+        "laravel/pint": "^1.18",
+        "laravel/sail": "^1.41",
+        "lucascudo/laravel-pt-br-localization": "^3.0",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.6",
+        "pestphp/pest": "^3.7",
+        "pestphp/pest-plugin-laravel": "^3.1",
+        "rector/rector": "^2.0",
+        "soloterm/solo": "^0.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+            "app/Helpers/worksWithDates.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan log-viewer:publish",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php -r \"file_exists('.env') && strpos(file_get_contents('.env'), 'WWWUSER_ID=') === false ? file_put_contents('.env', file_get_contents('.env') . PHP_EOL . 'WWWUSER_ID=' . trim(shell_exec('id -u'))) : null;\"",
+            "@php -r \"file_exists('.env') && strpos(file_get_contents('.env'), 'WWWGROUP_ID=') === false ? file_put_contents('.env', file_get_contents('.env') . PHP_EOL . 'WWWGROUP_ID=' . trim(shell_exec('id -g'))) : null;\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi",
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan ds:init $(pwd)"
+        ],
+        "init-project": [
+            "@post-root-package-install",
+            "@post-create-project-cmd",
+            "npm run build"
+        ],
+        "deploy": [
+            "@post-root-package-install",
+            "@post-update-cmd"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve --host=0.0.0.0\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
+        ],
+        "lint": [
+            "@format",
+            "@rector",
+            "@analyze"
+        ],
+        "rector": "@php vendor/bin/rector process --ansi --memory-limit=2G",
+        "rector-commit": "@php vendor/bin/rector process --no-progress-bar --no-ansi --memory-limit=2G",
+        "analyze": "@php vendor/bin/phpstan analyze --verbose --ansi --memory-limit=2G",
+        "analyze-commit": "@php vendor/bin/phpstan analyze --no-progress --no-ansi --memory-limit=2G",
+        "format": "@php vendor/bin/pint --ansi",
+        "test": [
+            "@php artisan config:clear && php artisan test --colors=always --env=testing"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

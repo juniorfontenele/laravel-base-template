@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Verifica se arquivos relacionados ao Composer foram alterados
+if git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep -q "composer.json\|composer.lock"; then
+  composer install
+fi
+
+# Verifica se arquivos relacionados ao NPM foram alterados
+if git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep -q "package.json\|package-lock.lock"; then
+  npm install
+fi
