@@ -1185,16 +1185,16 @@
         },
         {
             "name": "laradumps/laradumps",
-            "version": "v4.5.0",
+            "version": "v4.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laradumps/laradumps.git",
-                "reference": "2bb80f8d3484eead3d236daacb89183c3aa1abf1"
+                "reference": "bd12b7b71aec0689e3d418587e2a04cefe911478"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laradumps/laradumps/zipball/2bb80f8d3484eead3d236daacb89183c3aa1abf1",
-                "reference": "2bb80f8d3484eead3d236daacb89183c3aa1abf1",
+                "url": "https://api.github.com/repos/laradumps/laradumps/zipball/bd12b7b71aec0689e3d418587e2a04cefe911478",
+                "reference": "bd12b7b71aec0689e3d418587e2a04cefe911478",
                 "shasum": ""
             },
             "require": {
@@ -1245,7 +1245,7 @@
             "homepage": "https://github.com/laradumps/laradumps",
             "support": {
                 "issues": "https://github.com/laradumps/laradumps/issues",
-                "source": "https://github.com/laradumps/laradumps/tree/v4.5.0"
+                "source": "https://github.com/laradumps/laradumps/tree/v4.5.1"
             },
             "funding": [
                 {
@@ -1253,20 +1253,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-21T19:18:31+00:00"
+            "time": "2025-09-01T23:06:29+00:00"
         },
         {
             "name": "laradumps/laradumps-core",
-            "version": "v3.2.5",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laradumps/laradumps-core.git",
-                "reference": "0abde00a6627d90315c9bcf04fd73ac665960ff8"
+                "reference": "b5df14006570d16409f271db938a850f67ac78d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laradumps/laradumps-core/zipball/0abde00a6627d90315c9bcf04fd73ac665960ff8",
-                "reference": "0abde00a6627d90315c9bcf04fd73ac665960ff8",
+                "url": "https://api.github.com/repos/laradumps/laradumps-core/zipball/b5df14006570d16409f271db938a850f67ac78d7",
+                "reference": "b5df14006570d16409f271db938a850f67ac78d7",
                 "shasum": ""
             },
             "require": {
@@ -1314,7 +1314,7 @@
             "homepage": "https://github.com/laradumps/laradumps-core",
             "support": {
                 "issues": "https://github.com/laradumps/laradumps-core/issues",
-                "source": "https://github.com/laradumps/laradumps-core/tree/v3.2.5"
+                "source": "https://github.com/laradumps/laradumps-core/tree/v3.2.6"
             },
             "funding": [
                 {
@@ -1322,7 +1322,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-23T16:11:51+00:00"
+            "time": "2025-08-25T22:45:46+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3947,16 +3947,16 @@
         },
         {
             "name": "spatie/backtrace",
-            "version": "1.7.4",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/backtrace.git",
-                "reference": "cd37a49fce7137359ac30ecc44ef3e16404cccbe"
+                "reference": "8c0f16a59ae35ec8c62d85c3c17585158f430110"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/backtrace/zipball/cd37a49fce7137359ac30ecc44ef3e16404cccbe",
-                "reference": "cd37a49fce7137359ac30ecc44ef3e16404cccbe",
+                "url": "https://api.github.com/repos/spatie/backtrace/zipball/8c0f16a59ae35ec8c62d85c3c17585158f430110",
+                "reference": "8c0f16a59ae35ec8c62d85c3c17585158f430110",
                 "shasum": ""
             },
             "require": {
@@ -3994,7 +3994,8 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/backtrace/tree/1.7.4"
+                "issues": "https://github.com/spatie/backtrace/issues",
+                "source": "https://github.com/spatie/backtrace/tree/1.8.1"
             },
             "funding": [
                 {
@@ -4006,7 +4007,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-05-08T15:41:09+00:00"
+            "time": "2025-08-26T08:22:30+00:00"
         },
         {
             "name": "symfony/clock",
