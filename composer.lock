@@ -1184,16 +1184,16 @@
         },
         {
             "name": "laradumps/laradumps",
-            "version": "v4.6.1",
+            "version": "v4.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laradumps/laradumps.git",
-                "reference": "7f299b4c91d7f970e52147ee2ed46e8744fca24b"
+                "reference": "805d45f060d2b3badd1d3fc229a9bb893360d776"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laradumps/laradumps/zipball/7f299b4c91d7f970e52147ee2ed46e8744fca24b",
-                "reference": "7f299b4c91d7f970e52147ee2ed46e8744fca24b",
+                "url": "https://api.github.com/repos/laradumps/laradumps/zipball/805d45f060d2b3badd1d3fc229a9bb893360d776",
+                "reference": "805d45f060d2b3badd1d3fc229a9bb893360d776",
                 "shasum": ""
             },
             "require": {
@@ -1244,7 +1244,7 @@
             "homepage": "https://github.com/laradumps/laradumps",
             "support": {
                 "issues": "https://github.com/laradumps/laradumps/issues",
-                "source": "https://github.com/laradumps/laradumps/tree/v4.6.1"
+                "source": "https://github.com/laradumps/laradumps/tree/v4.6.2"
             },
             "funding": [
                 {
@@ -1252,20 +1252,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-12-02T14:09:49+00:00"
+            "time": "2025-12-11T11:38:20+00:00"
         },
         {
             "name": "laradumps/laradumps-core",
-            "version": "v3.2.10",
+            "version": "v3.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laradumps/laradumps-core.git",
-                "reference": "adfd62ca7328d971af618fbf83e89f61f7188748"
+                "reference": "cfc91afd1a6217ec568960eb996f371c08c380eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laradumps/laradumps-core/zipball/adfd62ca7328d971af618fbf83e89f61f7188748",
-                "reference": "adfd62ca7328d971af618fbf83e89f61f7188748",
+                "url": "https://api.github.com/repos/laradumps/laradumps-core/zipball/cfc91afd1a6217ec568960eb996f371c08c380eb",
+                "reference": "cfc91afd1a6217ec568960eb996f371c08c380eb",
                 "shasum": ""
             },
             "require": {
@@ -1313,7 +1313,7 @@
             "homepage": "https://github.com/laradumps/laradumps-core",
             "support": {
                 "issues": "https://github.com/laradumps/laradumps-core/issues",
-                "source": "https://github.com/laradumps/laradumps-core/tree/v3.2.10"
+                "source": "https://github.com/laradumps/laradumps-core/tree/v3.2.11"
             },
             "funding": [
                 {
@@ -1321,7 +1321,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-25T15:35:01+00:00"
+            "time": "2025-12-11T14:41:59+00:00"
         },
         {
             "name": "laravel/framework",
