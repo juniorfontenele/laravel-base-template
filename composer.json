@@ -28,6 +28,7 @@
         "barryvdh/laravel-ide-helper": "^3.6",
         "driftingly/rector-laravel": "^2.1",
         "fakerphp/faker": "^1.23",
+        "larastan/larastan": "^3.0",
         "laravel/boost": "^1.8",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.24",
@@ -94,7 +95,8 @@
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ],
         "format": "@php vendor/bin/pint --config=pint.json --ansi",
-        "rector": "@php vendor/bin/rector process --ansi --memory-limit=2G"
+        "rector": "@php vendor/bin/rector process --ansi --memory-limit=2G",
+        "analyze": "@php vendor/bin/phpstan analyse --ansi --memory-limit=2G"
     },
     "extra": {
         "laravel": {
