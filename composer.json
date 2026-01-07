@@ -1,20 +1,27 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/react-starter-kit",
+    "name": "juniorfontenele/laravel-base-template",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": [
         "laravel",
-        "framework"
+        "template"
     ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Junior Fontenele",
+            "email": "github@juniorfontenele.com.br"
+        }
+    ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.4",
         "inertiajs/inertia-laravel": "^2.0",
         "laravel/fortify": "^1.30",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "laravel/wayfinder": "^0.1.9"
+        "laravel/wayfinder": "^0.1.9",
+        "sentry/sentry-laravel": "^4.20"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

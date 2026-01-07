@@ -16,3 +16,9 @@ indent_size = 2
 
 [compose.yaml]
 indent_size = 4
+
+[*.{json,js,jsx,ts,tsx}]
+indent_size = 2
+
+[docker-compose.yml]
+indent_size = 4
