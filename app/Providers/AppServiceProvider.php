@@ -18,6 +18,8 @@ use Illuminate\Validation\Rules\Password;
 
 use function Sentry\configureScope;
 
+use Sentry\Laravel\Integration;
+
 use Sentry\State\Scope;
 
 class AppServiceProvider extends ServiceProvider
@@ -64,6 +66,12 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::unguard();
         Model::automaticallyEagerLoadRelationships();
+
+        if (app()->isProduction()) {
+            Model::handleLazyLoadingViolationUsing(Integration::lazyLoadingViolationReporter());
+            Model::handleDiscardedAttributeViolationUsing(Integration::discardedAttributeViolationReporter());
+            Model::handleMissingAttributeViolationUsing(Integration::missingAttributeViolationReporter());
+        }
     }
 
     private function setupContext(): void
