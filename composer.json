@@ -71,7 +71,7 @@
         ],
         "test": [
             "@php artisan config:clear --ansi",
-            "@php artisan test"
+            "@php artisan test --colors=always --env=testing"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
@@ -96,7 +96,12 @@
         ],
         "format": "@php vendor/bin/pint --config=pint.json --ansi",
         "rector": "@php vendor/bin/rector process --ansi --memory-limit=2G",
-        "analyze": "@php vendor/bin/phpstan analyse --ansi --memory-limit=2G"
+        "analyze": "@php vendor/bin/phpstan analyse --ansi --memory-limit=2G",
+        "lint": [
+            "@format",
+            "@rector",
+            "@analyze"
+        ]
     },
     "extra": {
         "laravel": {
