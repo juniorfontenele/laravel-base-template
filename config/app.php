@@ -76,6 +76,8 @@ return [
 
     'timezone' => 'UTC',
 
+    'users_default_timezone' => 'America/Fortaleza',
+
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
