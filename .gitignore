@@ -31,3 +31,4 @@ yarn-error.log
 /_ide_helper_models.php
 /.phpstorm.meta.php
 laradumps.yaml
+.env.sentry-build-plugin
