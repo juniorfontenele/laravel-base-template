@@ -46,7 +46,7 @@ class AppServiceProvider extends ServiceProvider
 
     private function setupHttpRequestScheme(): void
     {
-        if (config('app.force_https', app()->isLocal() ? false : true)) {
+        if (config('app.force_https', !app()->isLocal())) {
             URL::forceScheme('https');
 
             return;

@@ -26,6 +26,7 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.16",
         "barryvdh/laravel-ide-helper": "^3.6",
+        "driftingly/rector-laravel": "^2.1",
         "fakerphp/faker": "^1.23",
         "laravel/boost": "^1.8",
         "laravel/pail": "^1.2.2",
@@ -34,7 +35,8 @@
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
         "pestphp/pest": "^4.3",
-        "pestphp/pest-plugin-laravel": "^4.0"
+        "pestphp/pest-plugin-laravel": "^4.0",
+        "rector/rector": "^2.3"
     },
     "autoload": {
         "psr-4": {
@@ -91,7 +93,8 @@
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ],
-        "format": "@php vendor/bin/pint --config=pint.json --ansi"
+        "format": "@php vendor/bin/pint --config=pint.json --ansi",
+        "rector": "@php vendor/bin/rector process --ansi --memory-limit=2G"
     },
     "extra": {
         "laravel": {

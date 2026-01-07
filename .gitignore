@@ -9,6 +9,7 @@
 /resources/js/wayfinder
 /storage/*.key
 /storage/pail
+/storage/rector
 /vendor
 .DS_Store
 .env
@@ -28,3 +29,4 @@ yarn-error.log
 /.zed
 /_ide_helper.php
 /_ide_helper_models.php
+/.phpstorm.meta.php
