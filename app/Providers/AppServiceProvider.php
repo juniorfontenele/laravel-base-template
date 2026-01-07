@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace App\Providers;
 
 use Carbon\CarbonImmutable;
@@ -13,9 +15,10 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
-use Sentry\State\Scope;
 
 use function Sentry\configureScope;
+
+use Sentry\State\Scope;
 
 class AppServiceProvider extends ServiceProvider
 {

@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types = 1);
+
 return [
     'force_https' => env('APP_FORCE_HTTPS'),
 
-    'version' => env('APP_VERSION', date('Ymd').'-x-local'),
+    'version' => env('APP_VERSION', date('Ymd') . '-x-local'),
     'commit' => env('APP_COMMIT', 'x'),
     'build_date' => env('APP_BUILD_DATE', '19700101000000'),
 
