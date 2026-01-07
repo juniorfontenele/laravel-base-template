@@ -9,3 +9,8 @@
 CHANGELOG.md export-ignore
 README.md export-ignore
 .github/workflows/browser-tests.yml export-ignore
+/composer.lock export-ignore
+/package-lock.json export-ignore
+/_ide_helper.php export-ignore
+/_ide_helper_models.php export-ignore
+/.phpstorm.meta.php export-ignore
