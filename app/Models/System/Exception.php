@@ -10,6 +10,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Exception extends Model
 {
+    public function getTable(): string
+    {
+        return config('exception.table');
+    }
+
     public function casts(): array
     {
         return [

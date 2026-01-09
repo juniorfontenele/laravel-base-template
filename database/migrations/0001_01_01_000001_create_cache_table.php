@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cache', function (Blueprint $table) {
+        Schema::create(config('cache.stores.database.table'), function (Blueprint $table) {
             $table->defaultCharset();
             $table->string('key')->primary();
             $table->mediumText('value');
             $table->integer('expiration');
         });
 
-        Schema::create('cache_locks', function (Blueprint $table) {
+        Schema::create(config('cache.stores.database.lock_table'), function (Blueprint $table) {
             $table->defaultCharset();
             $table->string('key')->primary();
             $table->string('owner');
@@ -33,7 +33,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cache');
-        Schema::dropIfExists('cache_locks');
+        Schema::dropIfExists(config('cache.stores.database.table'));
+        Schema::dropIfExists(config('cache.stores.database.lock_table'));
     }
 };

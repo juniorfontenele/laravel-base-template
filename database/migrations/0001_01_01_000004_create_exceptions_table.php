@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('exceptions', function (Blueprint $table) {
+        Schema::create(config('exception.table'), function (Blueprint $table) {
             $table->defaultCharset();
             $table->id();
             $table->string('exception_class')->index();
@@ -51,6 +51,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('exceptions');
+        Schema::dropIfExists(config('exception.table'));
     }
 };
