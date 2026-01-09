@@ -11,6 +11,8 @@ return [
 
     'role' => env('APP_ROLE', 'app'),
 
+    'support_contact_email' => env('APP_SUPPORT_CONTACT_EMAIL', 'support@localhost'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
