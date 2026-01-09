@@ -3,6 +3,7 @@
 declare(strict_types = 1);
 use Carbon\CarbonInterface;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 if (! function_exists('getUserTimezone')) {
     /**
