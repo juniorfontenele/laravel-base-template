@@ -30,6 +30,8 @@ return new class extends Migration
             $table->string('app_commit')->nullable();
             $table->string('app_build_date')->nullable();
             $table->string('app_role')->nullable()->index();
+            $table->string('host_name')->nullable();
+            $table->string('host_ip')->nullable();
             $table->foreignId('user_id')->nullable()->constrained('users');
             $table->boolean('is_retryable')->index();
             $table->longText('stack_trace')->nullable();

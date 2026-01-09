@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-use App\Facades\AppException;
+use App\Facades\System\AppException;
 use App\Http\Middleware\HandleAppearance;
 use App\Http\Middleware\HandleInertiaRequests;
 use App\Http\Middleware\System\AddContextToSentry;
